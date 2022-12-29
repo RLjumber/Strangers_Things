@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import URL from './URL';
 
 
@@ -27,13 +28,31 @@ function SignUp() {
                 <form onSubmit={
                     async (event) => {
                         event.preventDefault();
+                        
+                        
                         // finish with a try catch
                     }
-                }>
-
+                  }
+                >
+                    <div>
+                        <label>Username:</label>
+                        <input 
+                        OnChange={setUsername}
+                        Value={username}
+                        />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input 
+                        OnChange={setPassword}
+                        value={password}
+                        type={'password'}
+                        />
+                    </div>
                 </form>
             </div>
-        )
+        );
     };
+};
 
-}
+export default SignUp();
